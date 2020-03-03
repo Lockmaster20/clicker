@@ -15,6 +15,7 @@ namespace clicker
         public Form1()
         {
             InitializeComponent();
+            label3.Text = p.Ler;
         }
 
         Score p = new Score();
@@ -28,6 +29,8 @@ namespace clicker
         private void Timer1_Tick(object sender, EventArgs e)
         {
             label2.Text = p.Temp();
+            p.Gravar();
+            label3.Text = p.Ler;
         }
 
         private void Button2_Click(object sender, EventArgs e)
