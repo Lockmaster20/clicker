@@ -37,7 +37,7 @@ namespace clicker
 
         public string ResT()
         {
-            _tempo = 60;
+            _tempo = 10;
             return (_tempo).ToString();
         }
 
