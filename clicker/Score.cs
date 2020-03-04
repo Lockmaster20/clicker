@@ -9,7 +9,7 @@ namespace clicker
     {
         private static string _path = Application.StartupPath + "\\Resources\\Texto.txt";
         private int _pontos;
-        private static int tmp = 30;
+        private static int tmp = 10;
         private int _tempo = tmp;
         private int _rec = Int32.Parse(File.ReadAllText(_path));
 
@@ -74,6 +74,7 @@ namespace clicker
         {
             get
             {
+                _rec = Int32.Parse(File.ReadAllText(_path));
                 return _rec.ToString();
             }
         }
