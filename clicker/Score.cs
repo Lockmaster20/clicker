@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 
@@ -6,10 +7,24 @@ namespace clicker
 {
     class Score
     {
-        private string _path = Application.StartupPath + "\\Resources\\Texto.txt";
-        private int _rec;
+        private static string _path = Application.StartupPath + "\\Resources\\Texto.txt";
         private int _pontos;
-        private int _tempo = 10;
+        private static int tmp = 30;
+        private int _tempo = tmp;
+        private int _rec = Int32.Parse(File.ReadAllText(_path));
+
+        public void Move(object sender)
+        {
+            if (_tempo > 0)
+            {
+                Random r = new Random();
+                int _x = int.Parse(r.Next(700).ToString());
+                int _y = int.Parse(r.Next(250).ToString()) + 100;
+                Point pt = new Point(_x, _y);
+                Button b = (Button)sender;
+                b.Location = pt;
+            }
+        }
 
         public string Conta()
         {
@@ -37,13 +52,19 @@ namespace clicker
 
         public string ResT()
         {
-            _tempo = 10;
+            _tempo = tmp;
             return (_tempo).ToString();
+        }
+
+        public void ResPos(object sender)
+        {
+            Point pt = new Point(350, 175);
+            Button b = (Button)sender;
+            b.Location = pt;
         }
 
         public void Gravar()
         {
-            _rec = Int32.Parse(File.ReadAllText(_path));
             if (_pontos > _rec)
             {
                 File.WriteAllText(_path, _pontos.ToString());
@@ -53,7 +74,6 @@ namespace clicker
         {
             get
             {
-                _rec = Int32.Parse(File.ReadAllText(_path));
                 return _rec.ToString();
             }
         }
