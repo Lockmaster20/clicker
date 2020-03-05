@@ -7,7 +7,7 @@ namespace clicker
 {
     class Score
     {
-        private static string _path = Application.StartupPath + "\\Resources\\Texto.txt";
+        private static string _path = Application.StartupPath + "\\Resources\\Recorde.txt";
         private int _pontos;
         private static int tmp = 10;
         private int _tempo = tmp;

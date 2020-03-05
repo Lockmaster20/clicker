@@ -82,15 +82,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Texto.txt">
+    <None Include="Resources\Recorde.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\img_snow_wide.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\img_snow.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

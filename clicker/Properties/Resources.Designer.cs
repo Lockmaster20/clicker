@@ -61,11 +61,12 @@ namespace clicker.Properties {
         }
         
         /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a 0.
+        ///   Consulta uma cadeia de caracteres localizada semelhante a 0
+        ///.
         /// </summary>
-        internal static string Texto {
+        internal static string Recorde {
             get {
-                return ResourceManager.GetString("Texto", resourceCulture);
+                return ResourceManager.GetString("Recorde", resourceCulture);
             }
         }
     }
