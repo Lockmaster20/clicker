@@ -19,7 +19,7 @@ namespace clicker
             {
                 Random r = new Random();
                 int _x = int.Parse(r.Next(700).ToString());
-                int _y = int.Parse(r.Next(250).ToString()) + 100;
+                int _y = int.Parse(r.Next(280).ToString()) + 70;
                 Point pt = new Point(_x, _y);
                 Button b = (Button)sender;
                 b.Location = pt;
